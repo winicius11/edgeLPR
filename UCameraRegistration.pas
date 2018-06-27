@@ -76,7 +76,7 @@ end;
 function TCameraRegister.Include(Data: TCamera): Boolean;
 begin
 
-  FCameras.Add(Data);
+  Result := FCameras.Add(Data) > 1;
 
 end;
 {$ENDREGION}
