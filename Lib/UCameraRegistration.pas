@@ -10,25 +10,14 @@ uses
 
 type
 
-  TCamera = class
-  private
-
-    // Class properties
+  TCamera = record
     FName: string;
     FDirection: string;
-    FPort: Integer;
     FFirmware: string;
     FIP: string;
-
-  public
-
-    // Properties
-    property Name: string read FName write FName;
-    property IP:   string read FIP   write FIP;
-    property Port: Integer read FPort write FPort;
-    property Direction: string read FDirection write FDirection;
-    property Firmware: string read FFirmware write FFirmware;
-
+    FPort: Integer;
+    FLatitude: string;
+    FLongitude: string;
   end;
 
   TCamerasList = TList<TCamera>;
