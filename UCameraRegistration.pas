@@ -33,6 +33,7 @@ type
 
   TCameraRegister = class
   private
+
     FCameras: TCamerasList;
 
 
@@ -41,6 +42,8 @@ type
     constructor Create; reintroduce;
     destructor Destroy; override;
 
+    function Include(Data: TCamera): Boolean;
+
     // Properties
     property Cameras: TCamerasList read FCameras write FCameras;
 
@@ -48,8 +51,7 @@ type
 
 implementation
 
-{ TCameraRegister }
-
+{$REGION 'TCameraRegister'}
 constructor TCameraRegister.Create;
 begin
 
@@ -70,5 +72,13 @@ begin
   inherited Destroy;
 
 end;
+
+function TCameraRegister.Include(Data: TCamera): Boolean;
+begin
+
+  FCameras.Add(Data);
+
+end;
+{$ENDREGION}
 
 end.
