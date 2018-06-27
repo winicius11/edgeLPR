@@ -4,7 +4,9 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   UMain in 'UMain.pas' {Form1},
-  UCameraRegistration in 'UCameraRegistration.pas';
+  UCameraRegistration in 'Lib\UCameraRegistration.pas',
+  ULinkedRecord in 'Lib\ULinkedRecord.pas',
+  URegistryLibrary in 'Lib\URegistryLibrary.pas';
 
 {$R *.res}
 
