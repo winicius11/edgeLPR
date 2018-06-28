@@ -7,7 +7,8 @@ uses
   UCameraRegistration in 'Lib\UCameraRegistration.pas',
   ULinkedRecord in 'Lib\ULinkedRecord.pas',
   URegistryLibrary in 'Lib\URegistryLibrary.pas',
-  UCameraLPRDriver in 'Lib\UCameraLPRDriver.pas';
+  UCameraLPRDriver in 'Lib\UCameraLPRDriver.pas',
+  ULPREventsManager in 'Lib\ULPREventsManager.pas';
 
 {$R *.res}
 
