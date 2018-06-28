@@ -40,7 +40,6 @@ begin
   Camera.IP        := '192.168.1.64';
   Camera.Port      := 80;
   Camera.Username  := 'admin';
-  Camera.Port      := '';
 
   FRegister := TCameraRegister.Create;
   FRegister.Include(Camera);
