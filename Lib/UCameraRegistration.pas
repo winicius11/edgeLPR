@@ -11,13 +11,15 @@ uses
 type
 
   TCamera = record
-    FName: string;
-    FDirection: string;
-    FFirmware: string;
-    FIP: string;
-    FPort: Integer;
-    FLatitude: string;
-    FLongitude: string;
+    Name: string;
+    Direction: string;
+    Firmware: string;
+    IP: string;
+    Port: Integer;
+    Username: string;
+    Password: string;
+    Latitude: string;
+    Longitude: string;
   end;
 
   TCamerasList = TList<TCamera>;
