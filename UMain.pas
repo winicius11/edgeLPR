@@ -43,24 +43,6 @@ begin
 
   FRegister := TCameraRegister.Create;
 
-  Camera.Name      := 'Leitura OCR';
-  Camera.Direction := 'cima';
-  Camera.Firmware  := '5.5';
-  Camera.IP        := '179.189.84.189';
-  Camera.Port      := 80;
-  Camera.Username  := 'admin';
-  Camera.Password  := '5695nettel';
-  FRegister.Include(Camera);
-
-  Camera.Name      := 'Local';
-  Camera.Direction := 'cima';
-  Camera.Firmware  := '5.5';
-  Camera.IP        := '192.168.1.64';
-  Camera.Port      := 80;
-  Camera.Username  := 'admin';
-  Camera.Password  := 'Abc12345';
-  FRegister.Include(Camera);
-
   FManager := TLPREventsManager.Create;
   FManager.OnPlate := HandleOnLPREvent;
   FManager.Cameras := FRegister.Cameras;
