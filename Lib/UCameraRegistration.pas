@@ -89,7 +89,7 @@ begin
 
   // Save
   for i := 0 to FCameras.Count - 1 do
-    TGenericRegistry.SaveRecord<TCamera>('Cameras', Cameras[i].FName, '', Cameras[i]);
+    TGenericRegistry.SaveRecord<TCamera>('Cameras', Cameras[i].Name, '', Cameras[i]);
 
 end;
 {$ENDREGION}
