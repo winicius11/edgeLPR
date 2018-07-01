@@ -8,7 +8,8 @@ uses
   ULinkedRecord in 'Lib\ULinkedRecord.pas',
   URegistryLibrary in 'Lib\URegistryLibrary.pas',
   UCameraLPRDriver in 'Lib\UCameraLPRDriver.pas',
-  ULPREventsManager in 'Lib\ULPREventsManager.pas';
+  ULPREventsManager in 'Lib\ULPREventsManager.pas',
+  UHeliosDriver in 'Lib\UHeliosDriver.pas';
 
 {$R *.res}
 

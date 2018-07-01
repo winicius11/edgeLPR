@@ -5,7 +5,6 @@ interface
 uses
   { Delphi }
   System.Generics.Collections,
-
   URegistryLibrary;
 
 type
