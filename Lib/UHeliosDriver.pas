@@ -18,18 +18,20 @@ type
   private
 
     // Class properties
-    FSnt: string;
-    FLgd: string;
     FLtd: string;
+    FLgd: string;
     FEdc: string;
+    Fid_: string;
+    FSnt: string;
 
   public
 
     // Properties
-    property Sentido: string read FSnt write FSnt;
-    property Longitude: string read FLgd write FLgd;
     property Latitude: string read FLtd write FLtd;
+    property Longitude: string read FLgd write FLgd;
     property Endereco: string read FEdc write FEdc;
+    property Id: string read Fid_ write Fid_;
+    property Sentido: string read FSnt write FSnt;
 
   end;
 
@@ -37,10 +39,12 @@ type
   private
 
     // Class properties
+    FCam: string;
     FPlc: string;
     FLoc: TLocation;
     FDat: string;
     FImg: string;
+    FUsr: string;
 
   public
 
@@ -52,10 +56,12 @@ type
     destructor Destroy; override;
 
     // Properties
+    property Camera: string read FCam write FCam;
     property Placa: string read FPlc write FPlc;
     property Localizacao: TLocation read FLoc write FLoc;
     property Data: string read FDat write FDat;
     property Imagem: string read FImg write FImg;
+    property User: string read FUsr write FUsr;
 
   end;
 
@@ -381,6 +387,7 @@ var
   BData: TBytes;
   PostData: TMemoryStream;
   Header: TNetHeaders;
+  Response: IHTTPResponse;
 begin
 
 //  SetLength(Header, 1);
@@ -413,7 +420,8 @@ begin
     PostData.Position := 0;
 
     // Send request
-    FHTTPClient.Post(URL, PostData);
+    Response := FHTTPClient.Post(URL, PostData);
+
 
   finally
     PostData.Free;
